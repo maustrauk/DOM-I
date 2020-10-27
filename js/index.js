@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "My staff",
+    "nav-item-8": "Personal",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -37,7 +39,14 @@ const siteContent = {
   },
 };
 
+//Append
+let nav = document.querySelector("nav");
+let new_a = document.createElement("a");
+let new_aa = document.createElement("a");
+nav.appendChild(new_a);
+nav.prepend(new_aa);
 
+//Selectors
 let nav_a = document.querySelectorAll("nav a");
 
 let logo = document.querySelector("#logo-img");
@@ -75,6 +84,8 @@ let email = contact_p[2];
 
 let footer = document.querySelector("footer p");
 
+//Content
+
 nav_a.forEach((element, i) => element.textContent = siteContent["nav"][`nav-item-${i+1}`]);
 logo.src = siteContent["nav"]["img-src"];
 
@@ -102,3 +113,6 @@ phone.textContent = siteContent["contact"]["phone"];
 email.textContent = siteContent["contact"]["email"];
 
 footer.textContent = siteContent["footer"]["copyright"];
+
+//New content
+nav_a.forEach(element => element.style.color = "green");
