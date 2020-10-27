@@ -45,6 +45,7 @@ let nav = document.querySelector("nav");
 let new_a = document.createElement("a");
 let new_aa = document.createElement("a");
 let p_adressState = document.createElement("p");
+let userButton = document.createElement("button");
 nav.appendChild(new_a);
 nav.prepend(new_aa);
 
@@ -53,6 +54,7 @@ let nav_a = document.querySelectorAll("nav a");
 
 let logo = document.querySelector("#logo-img");
 
+let cta_text =document.querySelector(".cta-text");
 let cta_h1 = document.querySelector(".cta h1");
 let cta_button = document.querySelector(".cta button");
 let cta_img = document.querySelector("#cta-img");
@@ -122,3 +124,10 @@ nav_a.forEach(element => element.style.color = "green");
 footer.style.background = "#cff2fa";
 document.querySelector("header").style.background = "#f0c7f2";
 address.appendChild(p_adressState);
+
+//Button
+cta_text.appendChild(userButton);
+userButton.textContent = "Click on me";
+userButton.onclick = function (event) {
+ userButton.textContent = "Clicked";
+}
