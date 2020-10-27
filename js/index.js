@@ -122,5 +122,3 @@ nav_a.forEach(element => element.style.color = "green");
 footer.style.background = "#cff2fa";
 document.querySelector("header").style.background = "#f0c7f2";
 address.appendChild(p_adressState);
-cta_h1.style.textAlign = "center";
-cta_h1.style.fontSize = "72px";
