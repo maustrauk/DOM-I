@@ -129,5 +129,6 @@ address.appendChild(p_adressState);
 cta_text.appendChild(userButton);
 userButton.textContent = "Click on me";
 userButton.onclick = function (event) {
- userButton.textContent = "Clicked";
+ userButton.textContent = `Clicked`;
+ userButton.classList.toggle("buttonClicker");
 }
