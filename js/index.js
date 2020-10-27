@@ -30,7 +30,8 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street",
+    "address-state" : "  Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -43,6 +44,7 @@ const siteContent = {
 let nav = document.querySelector("nav");
 let new_a = document.createElement("a");
 let new_aa = document.createElement("a");
+let p_adressState = document.createElement("p");
 nav.appendChild(new_a);
 nav.prepend(new_aa);
 
@@ -100,15 +102,16 @@ about_content.textContent = siteContent["main-content"]["about-content"];
 
 middle_img.src = siteContent["main-content"]["middle-img-src"];
 
-services_h4.textContent = siteContent["main-content"]["features-h4"];
-services_content.textContent = siteContent["main-content"]["features-content"]
-product_h4.textContent = siteContent["main-content"]["about-h4"];
-product_content.textContent = siteContent["main-content"]["about-content"];
-about_h4.textContent = siteContent["main-content"]["about-h4"];
-about_content.textContent = siteContent["main-content"]["about-content"];
+services_h4.textContent = siteContent["main-content"]["services-h4"];
+services_content.textContent = siteContent["main-content"]["services-content"]
+product_h4.textContent = siteContent["main-content"]["product-h4"];
+product_content.textContent = siteContent["main-content"]["product-content"];
+vision_h4.textContent = siteContent["main-content"]["vision-h4"];
+vision_content.textContent = siteContent["main-content"]["vision-content"];
 
 contact_h4.textContent = siteContent["contact"]["contact-h4"];
 address.textContent = siteContent["contact"]["address"];
+p_adressState.textContent =siteContent["contact"]["address-state"];
 phone.textContent = siteContent["contact"]["phone"];
 email.textContent = siteContent["contact"]["email"];
 
@@ -118,3 +121,6 @@ footer.textContent = siteContent["footer"]["copyright"];
 nav_a.forEach(element => element.style.color = "green");
 footer.style.background = "#cff2fa";
 document.querySelector("header").style.background = "#f0c7f2";
+address.appendChild(p_adressState);
+cta_h1.style.textAlign = "center";
+cta_h1.style.fontSize = "72px";
