@@ -20,6 +20,8 @@ function timer (element) {
 
 function myTimer () {
     
+    startButton.disabled = true;
+
     function final () {
         clearInterval(msTenstimer);
         clearInterval(msHundredstimer);
@@ -28,6 +30,7 @@ function myTimer () {
         msHundreds.textContent = 0;
         msTens.textContent = 0;
         digits.forEach(digit => digit.style.color = 'red');
+        startButton.disabled = false;
     }
     
 
