@@ -9,6 +9,22 @@ body {
   font-size: 80px;
 }
 
-.redDigit {
-  color: red;
+.counter-on {
+  animation-name: fontChangeanimation;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+
+
+@keyframes fontChangeanimation {
+  0% {
+    font-size: 100%;
+    color: black;
+  }
+  100% {
+    font-size: 600%;
+    color: red;
+  }
 }
